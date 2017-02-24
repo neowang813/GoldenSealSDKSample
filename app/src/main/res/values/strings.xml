@@ -3,4 +3,9 @@
     <string name="play_button">Play</string>
     <string name="login_button">Login</string>
     <string name="logout_button">Logout</string>
+    <string-array name="products_array">
+        <item>cardboard ($15.00)</item>
+        <item>kindle ($119.99)</item>
+        <item>macbook ($1,499.00)</item>
+    </string-array>
 </resources>

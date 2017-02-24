@@ -29,7 +29,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.android.sdkbuilder.MainActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/userImage"
@@ -84,5 +84,23 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Product:" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/checkout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Checkout"
+        android:textSize="12sp" />
 
 </LinearLayout>

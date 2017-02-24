@@ -5,11 +5,11 @@ android {
     buildToolsVersion '25.0.2'
 
     defaultConfig {
-        applicationId "com.android.sdkbuilder"
+        applicationId "com.goldenseal.sdksample"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
     }
     buildTypes {
         release {
@@ -31,6 +31,7 @@ dependencies {
 
     compile 'com.amazonaws:aws-android-sdk-core:2.3.8'
     compile ('com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.3.8')
-    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.15.0'
     compile 'com.google.code.gson:gson:2.7'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
