@@ -4,7 +4,13 @@ The is a sample App for how to use GoldenSealSDK
 
 ## Code Example
 
+### Configuration
+To use this SDK, please add application name in your AndroidManifest.xml file
 
+```xml
+<meta-data android:name="com.goldenseal.sdk.ApplicationName"
+            android:value="Login Sample" />
+```
 
 ### Init the SDK
 Use **GoldenSealSdk.init()** to init the SDK. In this method, the it will setup the SDK login and payment. After the setup, this method will try to consume the purchased item by using the **IPurchaseConsumer** call back.
