@@ -328,14 +328,22 @@ public class MainActivity extends AppCompatActivity implements GoldenSealSdk.SDK
         Log.d(LOG_TAG, "onActivityResult(" + requestCode + "," + resultCode + "," + data);
 
         // Pass on the activity result to the helper for handling
-        if (!GoldenSealSdk.onPurchaseActivityResult(requestCode, resultCode, data)) {
+        if (GoldenSealSdk.onPurchaseActivityResult(requestCode, resultCode, data)) {
+            Log.d(LOG_TAG, "onActivityResult handled by IABUtil.");
+        }
+        else if (GoldenSealSdk.onSignInActivityResult(requestCode, resultCode, data)){
+            if (resultCode == RESULT_OK) {
+                Toast.makeText(this, "SIGN IN SUCCESS", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "SIGN IN CANCEL", Toast.LENGTH_LONG).show();
+            }
+        }
+        else {
+
             // not handled, so handle it ourselves (here's where you'd
             // perform any handling of activity results not related to in-app
             // billing...
             super.onActivityResult(requestCode, resultCode, data);
-        }
-        else {
-            Log.d(LOG_TAG, "onActivityResult handled by IABUtil.");
         }
     }
 }
