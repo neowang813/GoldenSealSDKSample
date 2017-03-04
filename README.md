@@ -44,6 +44,17 @@ To trigger the sign in activity, please use **GoldenSealSdk.signIn()**. For exam
 ```java
 GoldenSealSdk.signIn(MainActivity.this, MainActivity.class);
 ```
+The sign in result will return back to whoever launched you via onActivityResult() 
+
+```java
+  if (GoldenSealSdk.onSignInActivityResult(requestCode, resultCode, data)){
+    if (resultCode == RESULT_OK) {
+      Toast.makeText(this, "SIGN IN SUCCESS", Toast.LENGTH_LONG).show();
+    } else {
+      Toast.makeText(this, "SIGN IN CANCEL", Toast.LENGTH_LONG).show();
+    }
+  }
+```
 
 ### Get user info
 ```java
